@@ -10,7 +10,7 @@
 				 echo '<div class="col-md-12">
 					 <center>
 						 <h1>Dashboard</h1>
-						 <h5>Đây là giao diện quản lí người dùng dành cho Người quản lí</h5>
+						 <h5>Đây là giao diện quản lí trang Web dành cho Người quản lí</h5>
 					 </center>
 				 </div>';
 			 }
@@ -20,7 +20,7 @@
 				 echo '<div class="col-md-12">
 					 <center>
 						 <h1>Dashboard</h1>
-						 <h5>Đây là giao diện quản lí người dùng dành cho Nhân viên</h5>
+						 <h5>Đây là giao diện quản lí trang Web dành cho Nhân viên</h5>
 					 </center>
 				 </div>';
 			 }

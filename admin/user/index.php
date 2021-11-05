@@ -10,18 +10,20 @@
 <div class="row" style="margin-top: 20px;">
 	<div class="col-md-12 table-responsive">
 		<h3>Quản Lý Người Dùng</h3>
+		</br>
 
 		<a href="editor.php"><button class="btn btn-success">Thêm Tài Khoản</button></a>
+		</br></br>
 
 		<table class="table table-bordered table-hover" style="margin-top: 20px;">
 			<thead>
 				<tr>
-					<th>STT</th>
-					<th>Họ & Tên</th>
+					<th style="text-align: center; width: 50px;">STT</th>
+					<th style="width: 250px;">Họ và Tên</th>
 					<th>Email</th>
 					<th>SĐT</th>
 					<th>Địa Chỉ</th>
-					<th>Quyền</th>
+					<th style="width: 100px;">Quyền hạn</th>
 					<th style="width: 50px"></th>
 					<th style="width: 50px"></th>
 				</tr>
@@ -31,7 +33,7 @@
 	$index = 0;
 	foreach($data as $item) {
 		echo '<tr>
-					<th>'.(++$index).'</th>
+					<th style="text-align: center">'.(++$index).'</th>
 					<td>'.$item['fullname'].'</td>
 					<td>'.$item['email'].'</td>
 					<td>'.$item['phone_number'].'</td>

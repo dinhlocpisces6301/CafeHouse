@@ -10,11 +10,12 @@
 <div class="row" style="margin-top: 20px;">
 	<div class="col-md-12 table-responsive">
 		<h3>Quản Lý Phản Hồi</h3>
+		</br>
 
 		<table class="table table-bordered table-hover" style="margin-top: 20px;">
 			<thead>
 				<tr>
-					<th>STT</th>
+					<th style="text-align: center">STT</th>
 					<th>Tên</th>
 					<th>Họ</th>
 					<th>SĐT</th>
@@ -30,7 +31,7 @@
 	$index = 0;
 	foreach($data as $item) {
 		echo '<tr>
-					<th>'.(++$index).'</th>
+					<th style="text-align: center">'.(++$index).'</th>
 					<td>'.$item['firstname'].'</td>
 					<td>'.$item['lastname'].'</td>
 					<td>'.$item['phone_number'].'</td>

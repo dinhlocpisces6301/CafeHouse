@@ -71,10 +71,10 @@ $lastestItems = executeResult($sql);
 				<input type="number" name="num" class="form-control" step="1" value="1" style="max-width: 60px;border: solid #e0dede 1px; border-radius: 0px; text-align: center;" onchange="fixCartNum()">
 				<button class="btn btn-light" style="border: solid #e0dede 1px; border-radius: 0px;" onclick="addMoreCart(1)">+</button>
 			</div>
-			<button class="btn btn-success" style="margin-top: 20px; width: 100%; border-radius: 0px; font-size: 30px;" onclick="addCart(<?=$product['id']?>, $('[name=num]').val())">
+			<button class="btn btn-success" style="margin-top: 20px; width: 50%; border-radius: 0px; font-size: 16px;" onclick="addCart(<?=$product['id']?>, $('[name=num]').val())">
 				<i class="bi bi-cart-plus-fill"></i> THÊM VÀO GIỎ HÀNG
 			</button>
-			<button class="btn btn-secondary" style="margin-top: 20px; width: 100%; border-radius: 0px; font-size: 30px; background-color: #edebeb; border: solid #edebeb 1px; color: black;">
+			<button class="btn btn-secondary" style="margin-top: 20px; width: 50%; border-radius: 0px; font-size: 16px; background-color: #edebeb; border: solid #edebeb 1px; color: black;">
 				<i class="bi bi-bookmark-heart-fill"></i> THÊM MỤC YÊU THÍCH
 			</button>
 		</div>

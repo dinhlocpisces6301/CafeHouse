@@ -10,14 +10,18 @@
 <div class="row" style="margin-top: 20px;">
 	<div class="col-md-12 table-responsive">
 		<h3>Quản Lý Sản Phẩm</h3>
-
-		<a href="editor.php"><button class="btn btn-success">Thêm Sản Phẩm</button></a>
-
+		</br>
+		<a href="editor.php">
+			<button class="btn btn-success">
+				Thêm Sản Phẩm
+			</button>
+		</a>
+		</br></br>
 		<table class="table table-bordered table-hover" style="margin-top: 20px;">
 			<thead>
 				<tr>
-					<th>STT</th>
-					<th>Thumbnail</th>
+					<th style="text-align: center">STT</th>
+					<th>Ảnh minh họa</th>
 					<th>Tên Sản Phẩm</th>
 					<th>Giá</th>
 					<th>Danh Mục</th>
@@ -30,7 +34,7 @@
 	$index = 0;
 	foreach($data as $item) {
 		echo '<tr>
-					<th>'.(++$index).'</th>
+					<th style="text-align: center">'.(++$index).'</th>
 					<td><img src="'.fixUrl($item['thumbnail']).'" style="height: 100px"/></td>
 					<td>'.$item['title'].'</td>
 					<td>'.number_format($item['discount']).' VNĐ</td>

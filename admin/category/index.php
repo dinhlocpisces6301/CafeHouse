@@ -34,10 +34,10 @@
 		</form>
 	</div>
 	<div class="col-md-6 table-responsive">
-		<table class="table table-bordered table-hover" style="margin-top: 20px;">
+		<table class="table table-bordered table-hover" style="margin-top: 2rem;">
 			<thead>
 				<tr>
-					<th>STT</th>
+					<th style="text-align: center;">STT</th>
 					<th>Tên Danh Mục</th>
 					<th style="width: 50px"></th>
 					<th style="width: 50px"></th>
@@ -48,13 +48,19 @@
 	$index = 0;
 	foreach($data as $item) {
 		echo '<tr>
-					<th>'.(++$index).'</th>
+					<th style="text-align: center">'.(++$index).'</th>
 					<td>'.$item['name'].'</td>
 					<td style="width: 50px">
-						<a href="?id='.$item['id'].'"><button class="btn btn-warning">Sửa</button></a>
+					<center>
+						<a href="?id='.$item['id'].'">
+							<button class="btn btn-warning">Sửa</button>
+						</a>
+					</center>
 					</td>
 					<td style="width: 50px">
-						<button onclick="deleteCategory('.$item['id'].')" class="btn btn-danger">Xoá</button>
+						<center>
+							<button onclick="deleteCategory('.$item['id'].')" class="btn btn-danger">Xoá</button>
+						</center>
 					</td>
 				</tr>';
 	}

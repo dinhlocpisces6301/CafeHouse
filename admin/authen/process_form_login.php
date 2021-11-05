@@ -22,7 +22,7 @@ if(!empty($_POST)) {
 		$sql = "insert into Tokens (user_id, token, created_at) values ('$userId', '$token', '$created_at')";
 		execute($sql);
 
-		header('Location: ../?');
+		header('Location: ../');
 		die();
 	}
 }

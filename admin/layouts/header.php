@@ -60,7 +60,7 @@
             <?php
             if($user['id']==1){
               echo '<li class="nav-item ">
-              <a class="nav-link" href="<?=$baseUrl?>category">
+              <a class="nav-link" href="'.$baseUrl.'category">
                 Danh Mục Sản Phẩm
               </a>
               </li>';}
@@ -68,7 +68,7 @@
             <?php
             if($user['id']==1){
               echo '<li class="nav-item">
-              <a class="nav-link" href="<?=$baseUrl?>product">
+              <a class="nav-link" href="'.$baseUrl.'product">
                 Quản Lý Sản Phẩm
               </a>
               </li>';}
@@ -86,7 +86,7 @@
             <?php
             if($user['id']==1){
               echo '<li class="nav-item">
-                <a class="nav-link" href="<?=$baseUrl?>user">
+                <a class="nav-link" href="'.$baseUrl.'user">
                   Quản Lý Người Dùng
                 </a>
                 </li>';}

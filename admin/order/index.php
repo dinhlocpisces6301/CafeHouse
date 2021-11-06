@@ -10,7 +10,10 @@
 
 <div class="row" style="margin-top: 20px;">
 	<div class="col-md-12 table-responsive">
-		<h3>Quản Lý Đơn Hàng</h3>
+		<h3>
+			<i class="bi bi-minecart"></i>
+			Quản Lý Đơn Hàng
+		</h3>
 		</br>
 		<table class="table table-bordered table-hover" style="margin-top: 20px;">
 			<thead>

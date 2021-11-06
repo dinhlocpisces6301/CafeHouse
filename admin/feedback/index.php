@@ -9,7 +9,10 @@
 
 <div class="row" style="margin-top: 20px;">
 	<div class="col-md-12 table-responsive">
-		<h3>Quản Lý Phản Hồi</h3>
+		<h3>
+			<i class="bi bi-question-circle-fill"></i>
+			Quản Lý Phản Hồi
+		</h3>
 		</br>
 
 		<table class="table table-bordered table-hover" style="margin-top: 20px;">

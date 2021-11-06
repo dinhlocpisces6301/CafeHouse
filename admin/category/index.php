@@ -3,6 +3,11 @@
 	$baseUrl = '../';
 	require_once('../layouts/header.php');
 
+	if($user['id']>1)
+	{
+		die();
+	}
+
 	require_once('form_save.php');
 	$id = $name = '';
 	if(isset($_GET['id'])) {
@@ -21,7 +26,10 @@
 
 <div class="row" style="margin-top: 20px;">
 	<div class="col-md-12" style="margin-bottom: 20px;">
-		<h3>Quản Lý Danh Mục Sản Phẩm</h3>
+		<h3>
+			<i class="bi bi-folder"></i>
+			Quản Lý Danh Mục Sản Phẩm
+		</h3>
 	</div>
 	<div class="col-md-6">
 		<form method="post" action="index.php" onsubmit="return validateForm();">

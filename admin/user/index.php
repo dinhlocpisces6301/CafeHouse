@@ -3,6 +3,11 @@
 	$baseUrl = '../';
 	require_once('../layouts/header.php');
 
+	if($user['id']>1)
+	{
+		die();
+	}
+	
 	$sql = "select User.*, Role.name as role_name from User left join Role on User.role_id = Role.id where User.deleted = 0 and User.role_id != 1";
 	$data = executeResult($sql);
 ?>

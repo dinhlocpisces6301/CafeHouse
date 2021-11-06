@@ -3,13 +3,21 @@
 	$baseUrl = '../';
 	require_once('../layouts/header.php');
 
+	if($user['id']>1)
+	{
+		die();
+	}
+
 	$sql = "select Product.*, Category.name as category_name from Product left join Category on Product.category_id = Category.id where Product.deleted = 0";
 	$data = executeResult($sql);
 ?>
 
 <div class="row" style="margin-top: 20px;">
 	<div class="col-md-12 table-responsive">
-		<h3>Quản Lý Sản Phẩm</h3>
+		<h3>
+			<i class="bi bi-file-earmark-text"></i>
+			Quản Lý Sản Phẩm
+		</h3>
 		</br>
 		<a href="editor.php">
 			<button class="btn btn-success">

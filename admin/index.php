@@ -9,18 +9,23 @@
 		 	if($user['id']==1){
 				 echo '<div class="col-md-12">
 					 <center>
-						 <h1>Dashboard</h1>
-						 <h5>Đây là giao diện quản lí trang Web dành cho Người quản lí</h5>
+						<h1>
+							<i class="bi bi-house-fill"></i>
+							Dashboard
+						</h1>
+						<h5>Đây là giao diện quản lí trang Web dành cho Người quản lí</h5>
 					 </center>
 				 </div>';
 			 }
-
-			 if($user['id']==2)
+			 else
 			 {
 				 echo '<div class="col-md-12">
 					 <center>
-						 <h1>Dashboard</h1>
-						 <h5>Đây là giao diện quản lí trang Web dành cho Nhân viên</h5>
+						<h1>
+							<i class="bi bi-house-fill"></i>
+							Dashboard
+						</h1>
+						<h5>Đây là giao diện quản lí trang Web dành cho Nhân viên</h5>
 					 </center>
 				 </div>';
 			 }

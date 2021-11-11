@@ -14,7 +14,10 @@
 
 <div class="row" style="margin-top: 20px;">
 	<div class="col-md-12 table-responsive">
-		<h3>Quản Lý Người Dùng</h3>
+		<h3>
+			<i class="bi bi-people-fill"></i>
+			Quản Lý Người Dùng
+		</h3>
 		</br>
 
 		<a href="editor.php"><button class="btn btn-success">Thêm Tài Khoản</button></a>

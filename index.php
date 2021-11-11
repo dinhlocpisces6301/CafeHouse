@@ -16,13 +16,13 @@ $lastestItems = executeResult($sql);
     <!-- The slideshow -->
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="assets/photos/banner1.png" alt="" style="width: 100%; height: 40rem;">
+            <img src="assets/photos/banner1.png" alt="">
         </div>
         <div class="carousel-item">
-            <img src="assets/photos/banner1.png" alt="" style="width: 100%; height: 40rem;">
+            <img src="assets/photos/banner1.png" alt="">
         </div>
         <div class="carousel-item">
-            <img src="assets/photos/banner1.png" alt="" style="width: 100%; height: 40rem;">
+            <img src="assets/photos/banner1.png" alt="">
         </div>
     </div>
 
@@ -43,7 +43,7 @@ $lastestItems = executeResult($sql);
         <?php
 		foreach($lastestItems as $item) {
 			echo '<div class="col-md-3 col-6 product-item">
-					<a href="detail.php?id='.$item['id'].'"><img src="'.$item['thumbnail'].'" style="width: 100%; height: 220px;"></a>
+					<a href="detail.php?id='.$item['id'].'"><img src="'.$item['thumbnail'].'" style="width: 100%; height: 200px;"></a>
 					<p style="font-weight: bold;"> Loại: '.$item['category_name'].'</p>
 					<p style="font-weight: bold;">'.$item['title'].'</p>
 					<p style="color: red; font-weight: bold;">Giá: '.number_format($item['discount']).' VND</p>

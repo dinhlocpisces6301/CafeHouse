@@ -39,11 +39,13 @@
 <body>
   <nav class="navbar navbar-dark fixed-top bg-primary flex-md-nowrap p-0 shadow">
     <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#"
-      style="color: rgb(255, 196, 0); font-family: Showcard Gothic, Arial, Helvetica, sans-serif; font-size: 1.5rem;">Hola
+      style="color: rgb(255, 196, 0); font-family: Showcard Gothic, Arial, Helvetica, sans-serif; font-size: 1.5rem; font-weight: bold;">Hola
       My Friends</a>
     <ul class="navbar-nav px-3">
       <li class="nav-item text-nowrap">
-        <a class="nav-link" href="<?=$baseUrl?>authen/logout.php">Thoát</a>
+        <a class="nav-link" href="<?=$baseUrl?>authen/logout.php">
+          <i class="bi bi-box-arrow-right" aria-hidden="true" style="color: #000; font-size: 2rem;"></i>
+        </a>
       </li>
     </ul>
   </nav>
@@ -92,7 +94,7 @@
             if($user['id']==1){
               echo '<li class="nav-item">
                 <a class="nav-link" href="'.$baseUrl.'user">
-                <i class="bi bi-people-fill"></i>
+                  <i class="bi bi-people-fill"></i>
                   -- Quản Lý Người Dùng
                 </a>
                 </li>';}

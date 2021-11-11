@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="assets/font/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- jQuery library -->
@@ -56,9 +56,9 @@
                     <ul class="sub-nav">
                         <?php
 	  	                    foreach($menuItems as $item) {
-	  		                echo '<li class="nav-item">
-				                <a class="nav-link" href="category.php?id='.$item['id'].'">'.$item['name'].'</a>
-				            </li>';
+	  		                echo '<li>
+				                    <a href="category.php?id='.$item['id'].'">'.$item['name'].'</a>
+				                </li>';
 	  	                    }
 	                    ?>
                     </ul>
@@ -66,37 +66,52 @@
                 <li>
                     <a href="">Khuyến mãi</a>
                 </li>
-                <li><a href="contact.php">Phản hồi</a></li>
 
-                <li id="nav-btn-shopping">
-                    <span id="cart_count"><?=$count?></span>
-                    <a href="cart.php">
-                        <i class="ti-shopping-cart"></i>
-                    </a>
+                <li>
+                    <a href="contact.php">Phản hồi</a>
                 </li>
 
-                <!-- <li id="nav-btn-user">
-                    <a href="">
-                        <i class="ti-user"></i>
-                    </a>
-                    <ul class="sub-nav">
-                        <li><a href="">Đăng nhập</a></li>
-                        <li><a href="">Đăng kí</a></li>
-                    </ul>
-                </li> -->
             </ul>
+
+            <div id="nav-btn-shopping">
+                <span id="cart_count"><?=$count?></span>
+                <a href="cart.php">
+                    <i class="ti-shopping-cart"></i>
+                </a>
+            </div>
+
+            <div id="menu-btn">
+                <i class="ti-menu"></i>
+            </div>
         </div>
 
 
-<script type="text/javascript">
-function addCart(productId, num) {
-    $.post('api/ajax_request.php', {
-        'action': 'cart',
-        'id': productId,
-        'num': num
-    }, function(data) {
-        location.reload()
-    })
-}
-</script>
-<!-- Cart start -->
+        <script type="text/javascript">
+            function addCart(productId, num) {
+                $.post('api/ajax_request.php', {
+                    'action': 'cart',
+                    'id': productId,
+                    'num': num
+                }, function (data) {
+                    location.reload()
+                })
+            }
+        </script>
+        <!-- Cart start -->
+
+        <script>
+            var header = document.getElementById('header');
+            var mobileMenu = document.getElementById('menu-btn');
+            var headerHeight = header.clientHeight;
+
+            // Đóng mở menu mobile
+            mobileMenu.onclick = function () {
+                // console.log(header.clientHeight);
+                var isClosed = header.clientHeight === headerHeight;
+                if (isClosed) {
+                    header.style.height = '420px';
+                } else {
+                    header.style.height = null;
+                }
+            }
+        </script>

@@ -61,7 +61,7 @@
               </a>
             </li>
             <?php
-            if($user['id']==1){
+            if($user['role_id']==1){
               echo '<li class="nav-item ">
               <a class="nav-link" href="'.$baseUrl.'category">
               <i class="bi bi-folder"></i>
@@ -70,7 +70,7 @@
               </li>';}
             ?>
             <?php
-            if($user['id']==1){
+            if($user['role_id']==1){
               echo '<li class="nav-item">
               <a class="nav-link" href="'.$baseUrl.'product">
               <i class="bi bi-file-earmark-text"></i>
@@ -91,7 +91,7 @@
               </a>
             </li>
             <?php
-            if($user['id']==1){
+            if($user['role_id']==1){
               echo '<li class="nav-item">
                 <a class="nav-link" href="'.$baseUrl.'user">
                   <i class="bi bi-people-fill"></i>

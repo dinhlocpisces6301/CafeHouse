@@ -272,7 +272,8 @@ div #header-logo a {
     }
 
     #nav {
-        left: 15rem;
+        left: 0;
+        right: 0;
         top: 6rem;
         background-color: rgba(45, 131, 182, 1);
     }
@@ -285,7 +286,7 @@ div #header-logo a {
         top: 0;
         left: 10rem;
         z-index: 1000;
-        width: 50%;
+        width: 25%;
     }
     
     #nav li .sub-nav li:hover {

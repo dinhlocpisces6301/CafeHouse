@@ -6,7 +6,7 @@
 
 <div class="row">
     <?php
-		 	if($user['id']==1){
+		 	if($user['role_id']==1){
 				 echo '<div class="col-md-12">
 					 <center>
 						<h1>

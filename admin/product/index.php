@@ -5,7 +5,7 @@
 
 	if($user['role_id']>1)
 	{
-		die();
+		header('Location: ../');
 	}
 
 	$sql = "select Product.*, Category.name as category_name from Product left join Category on Product.category_id = Category.id where Product.deleted = 0";
@@ -25,11 +25,11 @@
 			</button>
 		</a>
 		</br></br>
-		<table class="table table-bordered table-hover" style="margin-top: 20px;">
+		<table class="table table-sm table-hover" style="margin-top: 20px;">
 			<thead>
 				<tr>
 					<th style="text-align: center">STT</th>
-					<th>Ảnh minh họa</th>
+					<th>Ảnh Minh Họa</th>
 					<th>Tên Sản Phẩm</th>
 					<th>Giá</th>
 					<th>Danh Mục</th>

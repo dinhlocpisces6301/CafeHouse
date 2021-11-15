@@ -53,7 +53,7 @@
 					</div>
 					<div class="col-md-3 col-12" style="border: solid grey 1px; padding-top: 10px; padding-bottom: 10px;">
 						<div class="form-group">
-						  <label for="thumbnail">Thumbnail:</label>
+						  <label for="thumbnail">Ảnh Minh Họa:</label>
 						  <input type="file" class="form-control" id="thumbnail" name="thumbnail" accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*">
 						  <img id="thumbnail_img" src="<?=fixUrl($thumbnail)?>" style="max-height: 160px; margin-top: 5px; margin-bottom: 15px;">
 						</div>

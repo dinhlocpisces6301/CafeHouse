@@ -17,11 +17,11 @@
 		<h3>Chi Tiết Đơn Hàng</h3>
 	</div>
 	<div class="col-md-8 table-responsive">
-		<table class="table table-bordered table-hover" style="margin-top: 20px;">
+		<table class="table table-sm table-hover" style="margin-top: 20px;">
 			<thead>
 				<tr>
 					<th>STT</th>
-					<th>Thumbnail</th>
+					<th>Ảnh minh họa</th>
 					<th>Tên Sản Phẩm</th>
 					<th>Giá</th>
 					<th>Số Lượng</th>
@@ -54,9 +54,9 @@
 		</table>
 	</div>
 	<div class="col-md-4">
-		<table class="table table-bordered table-hover" style="margin-top: 20px;">
+		<table class="table table-sm table-hover" style="margin-top: 20px;">
 			<tr>
-				<th>Họ & Tên: </th>
+				<th>Họ và Tên: </th>
 				<td><?=$orderItem['fullname']?></td>
 			</tr>
 			<tr>
@@ -68,7 +68,7 @@
 				<td><?=$orderItem['address']?></td>
 			</tr>
 			<tr>
-				<th>Phone: </th>
+				<th>SĐT: </th>
 				<td><?=$orderItem['phone_number']?></td>
 			</tr>
 		</table>

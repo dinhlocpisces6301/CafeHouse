@@ -62,14 +62,9 @@ $lastestItems = executeResult($sql);
 		echo '<ul class="pagination">';
             if ($current_page > 1 && $total_page > 1){
                 echo '<li>
-					<a href="category.php?id='.$category_id.'&&page='.($current_page-1).'"> Prev </a>
+					<a href="category.php?id='.$category_id.'&&page='.($current_page-1).'"> Trước </a>
 				</li>';
             }
-			else{
-				echo '<li>
-					<span> Prev </span>
-				</li>';
-			}
  
             for ($i = 1; $i <= $total_page; $i++){
                 if ($i == $current_page){
@@ -86,15 +81,9 @@ $lastestItems = executeResult($sql);
  
             if ($current_page < $total_page && $total_page > 1){
                 echo '<li>
-					<a href="category.php?id='.$category_id.'&&page='.($current_page+1).'"> Next </a>
+					<a href="category.php?id='.$category_id.'&&page='.($current_page+1).'"> Sau </a>
 				</li>';
             }
-			else
-			{
-				echo '<li>
-					<span>Next</span>
-				</li>';
-			}
 		echo '</ul>';
     ?>
 </div>

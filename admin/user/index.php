@@ -5,7 +5,7 @@
 
 	if($user['role_id']>1)
 	{
-		die();
+		header('Location: ../');
 	}
 	
 	$sql = "select User.*, Role.name as role_name from User left join Role on User.role_id = Role.id where User.deleted = 0 and User.role_id != 1";
@@ -23,7 +23,7 @@
 		<a href="editor.php"><button class="btn btn-success">Thêm Tài Khoản</button></a>
 		</br></br>
 
-		<table class="table table-bordered table-hover" style="margin-top: 20px;">
+		<table class="table table-sm table-hover" style="margin-top: 20px;">
 			<thead>
 				<tr>
 					<th style="text-align: center; width: 50px;">STT</th>

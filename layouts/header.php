@@ -63,6 +63,15 @@
                 </li>
                 <li>
                     <a href="">Khuyến mãi</a>
+                    <ul class="sub-nav">
+                        <?php
+	  	                    foreach($menuItems as $item) {
+	  		                echo '<li>
+				                    <a href="category.php?id='.$item['id'].'">'.$item['name'].'</a>
+				                </li>';
+	  	                    }
+	                    ?>
+                    </ul>
                 </li>
 
                 <li>

@@ -5,7 +5,7 @@
 
 	if($user['role_id']>1)
 	{
-		die();
+		header('Location: ../');
 	}
 
 	require_once('form_save.php');
@@ -42,7 +42,7 @@
 		</form>
 	</div>
 	<div class="col-md-6 table-responsive">
-		<table class="table table-bordered table-hover" style="margin-top: 2rem;">
+		<table class="table table-sm table-hover" style="margin-top: 2rem;">
 			<thead>
 				<tr>
 					<th style="text-align: center;">STT</th>

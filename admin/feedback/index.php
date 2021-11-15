@@ -15,7 +15,7 @@
 		</h3>
 		</br>
 
-		<table class="table table-bordered table-hover" style="margin-top: 20px;">
+		<table class="table table-sm table-hover" style="margin-top: 20px;">
 			<thead>
 				<tr>
 					<th style="text-align: center">STT</th>

@@ -44,12 +44,12 @@
 					<td>'.$item['order_date'].'</td>
 					<td style="width: 50px">';
 		if($item['status'] == 0) {
-			echo '<button onclick="changeStatus('.$item['id'].', 1)" class="btn btn-sm btn-success" style="margin-bottom: 10px;">Approve</button>
-			<button onclick="changeStatus('.$item['id'].', 2)" class="btn btn-sm btn-danger">Cancel</button>';
+			echo '<button onclick="changeStatus('.$item['id'].', 1)" class="btn btn-sm btn-success" style="margin-bottom: 10px;">Chốt đơn</button>
+			<button onclick="changeStatus('.$item['id'].', 2)" class="btn btn-sm btn-danger">Hủy đơn</button>';
 		} else if($item['status'] == 1) {
-			echo '<label class="badge badge-success">Approved</label>';
+			echo '<label class="badge badge-success">Đã xử lí</label>';
 		} else {
-			echo '<label class="badge badge-danger">Cancel</label>';
+			echo '<label class="badge badge-danger">Đã hủy đơn</label>';
 		}
 		echo '</td>
 				</tr>';

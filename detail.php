@@ -10,56 +10,24 @@ $sql = "select Product.*, Category.name as category_name from Product left join 
 
 $lastestItems = executeResult($sql);
 ?>
-<style type="text/css">
-	.breadcrumb {
-		background-color: transparent;
-		padding: 0px;
-	}
-	.breadcrumb li {
-		margin-right: 10px;
-	}
-</style>
+
 <div class="container">
+	<ul class="breadcrumb">
+		<li><a href="index.php">Trang Chủ</a></li>
+		<li> / <a href="category.php">Cửa Hàng</a></li>
+		<li> / <a href="category.php?id=<?=$product['category_id']?>"><?=$product['category_name']?></a></li>
+		<li> / <?=$product['title']?></li>
+	</ul>
 	<div class="row">
 		<div class="col-md-6">
-			<img src="<?=$product['thumbnail']?>" style="width: 500px; height: 500px;">
+			<center>
+				<img src="<?=$product['thumbnail']?>" style="width: 400px; height: 400px;">
+			</center>
 		</div>
+
 		<div class="col-md-6">
-			<ul class="breadcrumb">
-				<li><a href="index.php">Trang Chủ</a></li>
-				<li><a href="category.php?id=<?=$product['category_id']?>"> / <?=$product['category_name']?></a></li>
-				<li> / <?=$product['title']?></li>
-			</ul>
 			<h2><?=$product['title']?></h2>
-			<ul style="display: flex; list-style-type: none; margin: 0px; padding: 0px;">
-				<li style="color: orange; font-size: 13pt; padding-top: 2px; margin-right: 5px;">5.0</li>
-				<li style="color: orange; padding: 2px;">
-				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-				<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
-				</svg>
-				</li>
-				<li style="color: orange; padding: 2px;">
-				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-				<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
-				</svg>
-				</li>
-				<li style="color: orange; padding: 2px;">
-				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-				<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
-				</svg>
-				</li>
-				<li style="color: orange; padding: 2px;">
-				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-				 <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
-				</svg>
-				</li>
-				<li style="color: orange; padding: 2px;">
-				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-				<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
-				</svg>
-				</li>
-				<li style="margin-left: 20px; border-left: solid #dad7d7 1px; font-size: 13pt; padding-top: 3px; padding-left: 20px;">Đã Bán rất nhiều</li>
-				</ul>
+
 			<p style="font-size: 30px; color: red; margin-top: 15px; margin-bottom: 15px;">
 				<?=number_format($product['discount'])?> VND
 			</p>
@@ -74,9 +42,9 @@ $lastestItems = executeResult($sql);
 			<button class="btn btn-success" style="margin-top: 20px; width: 50%; border-radius: 0px; font-size: 16px;" onclick="addCart(<?=$product['id']?>, $('[name=num]').val())">
 				<i class="bi bi-cart-plus-fill"></i> THÊM VÀO GIỎ HÀNG
 			</button>
-			<button class="btn btn-secondary" style="margin-top: 20px; width: 50%; border-radius: 0px; font-size: 16px; background-color: #edebeb; border: solid #edebeb 1px; color: black;">
+			<!-- <button class="btn btn-secondary" style="margin-top: 20px; width: 50%; border-radius: 0px; font-size: 16px; background-color: #edebeb; border: solid #edebeb 1px; color: black;">
 				<i class="bi bi-bookmark-heart-fill"></i> THÊM MỤC YÊU THÍCH
-			</button>
+			</button> -->
 		</div>
 		<div class="col-md-12" style="margin-top: 20px; margin-bottom: 30px;">
 			<h3>Chi Tiết Sản Phẩm</h3>

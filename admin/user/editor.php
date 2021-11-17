@@ -99,7 +99,7 @@
                     </div>
                     </br>
 
-                    <button class="btn btn-success">Đăng Ký</button>
+                    <button class="btn btn-success">Xác nhận</button>
 					</br></br></br></br>
 
                 </form>

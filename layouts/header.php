@@ -63,14 +63,38 @@
                 </li>
                 <li>
                     <a href="">Khuyến mãi</a>
-                    <ul class="sub-nav">
+                    <ul class="sub-nav sales-code">
                         <?php
-	  	                    foreach($menuItems as $item) {
-	  		                echo '<li>
-				                    <a href="category.php?id='.$item['id'].'">'.$item['name'].'</a>
-				                </li>';
-	  	                    }
+	  	                    // foreach($menuItems as $item) {
+	  		                // echo '<li>
+				            //         <a href="category.php?id='.$item['id'].'">'.$item['name'].'</a>
+				            //     </li>';
+	  	                    // }
 	                    ?>
+
+                        <li>
+				            <p>
+                                Mã giảm giá: IDJAODOH </br>
+                                Từ 01-31/11
+                                Cho các đơn hàng từ 100k
+                            </p>
+				        </li>
+
+                        <li>
+				            <p>
+                                Mã giảm giá: IKOQINOJA </br>
+                                Từ 01-31/11
+                                Cho các đơn hàng từ 100k
+                            </p>
+				        </li>
+
+                        <li>
+				            <p>
+                                Mã giảm giá: ADISDHAD </br>
+                                Từ 01-31/11
+                                Cho các đơn hàng từ 100k
+                            </p>
+				        </li>
                     </ul>
                 </li>
 

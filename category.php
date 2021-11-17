@@ -7,13 +7,13 @@ if($category_id == null || $category_id == '') {
 	$sql = "select * from product";
 }
 else {
+	$sql = "select * from category where id = $category_id";
+	$category = executeResult($sql, true);
+
 	$sql = "select * from product where category_id = $category_id";
 }
 $total_record = executeResult($sql);
-$total_records = 0;
-
-foreach($total_record as $item)
-	$total_records += 1;
+$total_records = count($total_record);
 
 $current_page = isset($_GET['page']) ? $_GET['page'] : 1;
 $limit = 12;
@@ -41,7 +41,30 @@ $lastestItems = executeResult($sql);
 
 ?>
 
+
+
 <div class="container">
+		<ul class="breadcrumb">
+			<li>
+				<a href="index.php">Trang Chủ</a>
+			</li>
+
+			<li>/ 
+				<?php
+					if($category_id != null || $category_id != '')
+						echo '<a href="category.php">Cửa Hàng</a>';
+					else
+					echo 'Cửa Hàng';
+				?>	
+			</li>
+
+			<li>/ 
+				<?php
+					if($category_id != null || $category_id != '')
+						echo ''.$category['name'].'';
+				?>
+			</li>
+		</ul>
     <div class="row">
         <?php
 		foreach($lastestItems as $item) {

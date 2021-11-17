@@ -185,8 +185,8 @@ div #header-logo a {
     background: transparent;
     padding: 1rem;
     border-radius: 0;
-    border-bottom: 2px solid #fff;
-    border-top: 2px solid #fff;
+    border: 2px solid #fff;
+    border-radius: 8px;
 }
 .container .breadcrumb li {
     margin-right: 0.5rem;

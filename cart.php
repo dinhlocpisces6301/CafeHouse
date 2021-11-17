@@ -40,8 +40,16 @@ foreach($_SESSION['cart'] as $item) {
 		</tr>';
 }
 ?>
-		</table>
-		<a href="checkout.php"><button class="btn btn-success">TIẾP TỤC THANH TOÁN</button></a>
+		<?php 
+			if($_SESSION['cart'] == [])
+				echo ' 
+					<td colspan="7";">Giỏ hàng trống! . . .</td>
+					</table>';
+			else
+				echo '
+					</table>
+					<a href="checkout.php"><button class="btn btn-success">TIẾP TỤC THANH TOÁN</button></a>';
+		?>
 	</div>
 </div>
 <script type="text/javascript">

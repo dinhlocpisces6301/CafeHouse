@@ -20,14 +20,14 @@
     margin-bottom: 30px;
 }
 .ct-blog .inner {
-    background-color:aqua;
+    background-color:#ffff00;
     padding: 10px;
     transition: all 0.2s ease-in-out 0s;
     cursor: pointer;
     height: 100%;
 }
 .ct-blog .inner:hover {
-    background-color: #ffff00;
+    background-color: aqua;
 }
 .ct-blog .fauxcrop {
     height: 180px;

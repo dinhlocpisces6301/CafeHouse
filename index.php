@@ -38,6 +38,7 @@ $lastestItems = executeResult($sql);
 
 
 <div class="container">
+    <br/> <br/>
     <h1 style="text-align: center; margin-top: 20px; margin-bottom: 20px;">SẢN PHẨM MỚI NHẤT</h1>
     <div class="row">
         <?php
@@ -52,7 +53,7 @@ $lastestItems = executeResult($sql);
 		}
 	?>
     </div>
-</div>
+</div> <br/> <br/>
 
 
 <!-- danh muc san pham -->

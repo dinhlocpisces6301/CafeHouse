@@ -43,7 +43,7 @@
 	foreach($data as $item) {
 		echo '<tr>
 					<th style="text-align: center">'.(++$index).'</th>
-					<td><img src="'.fixUrl($item['thumbnail']).'" style="height: 100px"/></td>
+					<td><img src="'.fixUrl($item['thumbnail']).'" style="height: 160px; width: 160px;"/></td>
 					<td>'.$item['title'].'</td>
 					<td>'.number_format($item['discount']).' VNĐ</td>
 					<td>'.$item['category_name'].'</td>

@@ -20,7 +20,7 @@
 		<table class="table table-sm table-hover" style="margin-top: 20px;">
 			<thead>
 				<tr>
-					<th>STT</th>
+					<th style="text-align: center">STT</th>
 					<th>Ảnh minh họa</th>
 					<th>Tên Sản Phẩm</th>
 					<th>Giá</th>
@@ -33,8 +33,8 @@
 	$index = 0;
 	foreach($data as $item) {
 		echo '<tr>
-					<th>'.(++$index).'</th>
-					<td><img src="'.fixUrl($item['thumbnail']).'" style="height: 120px"/></td>
+					<th style="text-align: center">'.(++$index).'</th>
+					<td><img src="'.fixUrl($item['thumbnail']).'" style="height: 160px; width: 160px;"/></td>
 					<td>'.$item['title'].'</td>
 					<td>'.$item['price'].'</td>
 					<td>'.$item['num'].'</td>

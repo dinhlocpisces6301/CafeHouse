@@ -6,27 +6,27 @@ require_once('layouts/header.php');
 	<div class="row">
 		<div class="col-md-6">
 			<div class="form-group">
-			  <input required="true" type="text" class="form-control" id="usr" name="fullname" placeholder="Nhập họ * tên">
+			  <input required="true" type="text" class="form-control" id="usr" name="fullname" placeholder="Nhập Họ Tên">
 			</div>
 			<div class="form-group">
-			  <input required="true" type="email" class="form-control" id="email" name="email" placeholder="Nhập email">
+			  <input required="true" type="email" class="form-control" id="email" name="email" placeholder="Nhập Email">
 			</div>
 			<div class="form-group">
-			  <input required="true" type="tel" class="form-control" id="phone" name="phone" placeholder="Nhập sđt">
+			  <input required="true" type="tel" class="form-control" id="phone" name="phone" placeholder="Nhập SĐT">
 			</div>
 			<div class="form-group">
-			  <input required="true" type="text" class="form-control" id="address" name="address" placeholder="Nhập địa chỉ">
+			  <input required="true" type="text" class="form-control" id="address" name="address" placeholder="Nhập Địa Chỉ">
 			</div>
 			<div class="form-group">
 			  <label for="pwd">Nội dung:</label>
-			  <textarea class="form-control" rows="5"></textarea>
+			  <textarea class="form-control" rows="8"></textarea>
 			</div>
 		</div>
 		<div class="col-md-6">
-			<table class="table table-bordered" style="background-color: #fff;">
+			<table class="table table-bordered border-primary" style="background-color: #fff;">
 			<tr>
 				<th>STT</th>
-				<th>Tiêu Đề</th>
+				<th>Sản Phẩm</th>
 				<th>Giá</th>
 				<th>Số Lượng</th>
 				<th>Tổng Giá</th>
@@ -54,7 +54,7 @@ foreach($_SESSION['cart'] as $item) {
 		</tr>'
 ?>
 		</table>
-		<a href="checkout.php"><button class="btn btn-success" style="border-radius: 0px; font-size: 26px; width: 100%;">THANH TOÁN</button></a>
+		<a href="checkout.php"><button class="btn btn-success" style="width: 100%;">THANH TOÁN</button></a>
 		</div>
 	</div>
 </form>

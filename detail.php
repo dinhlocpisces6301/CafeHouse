@@ -26,28 +26,33 @@ $lastestItems = executeResult($sql);
 		</div>
 
 		<div class="col-md-6">
-			<h2><?=$product['title']?></h2>
-
-			<p style="font-size: 30px; color: red; margin-top: 15px; margin-bottom: 15px;">
-				<?=number_format($product['discount'])?> VND
-			</p>
-			<p style="font-size: 15px; color: grey; margin-top: 15px; margin-bottom: 15px;">
-				<del><?=number_format($product['price'])?> VND</del>
-			</p>
+			<h1 style="text-align: center;"><?=$product['title']?></h1><br />
+ 		<?php
+			if($product['discount'] != $product['price'])
+				echo '
+					<p style="font-size: 32px; color: red; margin-top: 15px; margin-bottom: 15px;">
+						Giá chỉ: ' .number_format(''.$product['discount'].''). ' VND
+					</p>
+					<p style="font-size: 24px; color: grey; margin-top: 15px; margin-bottom: 15px;">
+						<del>' .number_format(''.$product['price'].''). ' VND </del>
+					</p>';
+			else
+				echo '
+					<p style="font-size: 32px; color: red; margin-top: 15px; margin-bottom: 15px;">
+						Giá: ' .number_format(''.$product['discount'].''). ' VND
+					</p>';
+		?>
 			<div style="display: flex;">
-				<button class="btn btn-light" style="border: solid #e0dede 1px; border-radius: 0px;" onclick="addMoreCart(-1)">-</button>
-				<input type="number" name="num" class="form-control" step="1" value="1" style="max-width: 60px;border: solid #e0dede 1px; border-radius: 0px; text-align: center;" onchange="fixCartNum()">
-				<button class="btn btn-light" style="border: solid #e0dede 1px; border-radius: 0px;" onclick="addMoreCart(1)">+</button>
+				<button class="btn btn-light" style="border: solid #e0dede 1px; border-radius: 0px; width: 48px;" onclick="addMoreCart(-1)">-</button>
+				<input type="number" name="num" class="form-control" step="1" value="1" style="max-width: 100px; border: solid #e0dede 1px; border-radius: 0px; text-align: center;" onchange="fixCartNum()">
+				<button class="btn btn-light" style="border: solid #e0dede 1px; border-radius: 0px; width: 48px;" onclick="addMoreCart(1)">+</button>
 			</div>
-			<button class="btn btn-success" style="margin-top: 20px; width: 50%; border-radius: 0px; font-size: 16px;" onclick="addCart(<?=$product['id']?>, $('[name=num]').val())">
+			<button class="btn btn-success" style="margin-top: 20px; width: 196px; border-radius: 0px; font-size: 16px;" onclick="addCart(<?=$product['id']?>, $('[name=num]').val())">
 				<i class="bi bi-cart-plus-fill"></i> THÊM VÀO GIỎ HÀNG
 			</button>
-			<!-- <button class="btn btn-secondary" style="margin-top: 20px; width: 50%; border-radius: 0px; font-size: 16px; background-color: #edebeb; border: solid #edebeb 1px; color: black;">
-				<i class="bi bi-bookmark-heart-fill"></i> THÊM MỤC YÊU THÍCH
-			</button> -->
 		</div>
 		<div class="col-md-12" style="margin-top: 20px; margin-bottom: 30px;">
-			<h3>Chi Tiết Sản Phẩm</h3>
+			<h3 style="text-align: center;">Chi Tiết Sản Phẩm</h3>
 			<?=$product['description']?>
 		</div>
 	</div>

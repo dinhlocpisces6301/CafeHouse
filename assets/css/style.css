@@ -182,8 +182,11 @@ div #header-logo a {
 
 .container .breadcrumb {
     /* background-color: transparent; */
-    background: linear-gradient(to bottom right, #4dfcff, #3fc0c2 20%);
+    background: transparent;
     padding: 1rem;
+    border-radius: 0;
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
 }
 .container .breadcrumb li {
     margin-right: 0.5rem;
@@ -264,7 +267,7 @@ div #header-logo a {
     list-style: none;
     background-color: #fff;
     padding: 0.5rem 1.5rem;
-    margin-left: 2px;
+    margin-left: 12px;
     border-radius: 50%;
 }
 

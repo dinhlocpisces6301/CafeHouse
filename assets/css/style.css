@@ -143,8 +143,8 @@ div #header-logo a {
     display: block;
     line-height: 3rem;
     width: 100%;
-    border-bottom-left-radius: 16px;
-    border-bottom-right-radius: 16px;
+    /* border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px; */
 }
 
 #nav li:hover >.sub-nav {
@@ -167,12 +167,12 @@ div #header-logo a {
     display: block;
     text-align: center;
     color: #000;
-    padding: 3rem;
+    padding: 1rem;
     margin: 0;
 }
 
 #nav li .sales-code {
-    width: 25rem;
+    width: 20rem;
 }
 
 #nav li .sales-code li {

@@ -75,7 +75,7 @@
                         <li>
 				            <p>
                                 Mã giảm giá: IDJAODOH </br>
-                                Từ 01-31/11
+                                Từ 01-31/11</br>
                                 Cho các đơn hàng từ 100k
                             </p>
 				        </li>
@@ -83,7 +83,7 @@
                         <li>
 				            <p>
                                 Mã giảm giá: IKOQINOJA </br>
-                                Từ 01-31/11
+                                Từ 01-31/11</br>
                                 Cho các đơn hàng từ 100k
                             </p>
 				        </li>
@@ -91,7 +91,7 @@
                         <li>
 				            <p>
                                 Mã giảm giá: ADISDHAD </br>
-                                Từ 01-31/11
+                                Từ 01-31/11</br>
                                 Cho các đơn hàng từ 100k
                             </p>
 				        </li>

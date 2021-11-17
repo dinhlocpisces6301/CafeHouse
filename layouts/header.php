@@ -48,7 +48,7 @@
         <div id="header">
             <div id="header-logo"><a href="index.php">HOLA MY FRIEND</a></div>
             <ul id="nav">
-                <li><a href="404.html">Tin Tức</a></li>
+                <li><a href="News.php">Tin Tức</a></li>
                 <li>
                     <a href="category.php">Cửa hàng</a>
                     <ul class="sub-nav">

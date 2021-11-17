@@ -43,7 +43,7 @@ $lastestItems = executeResult($sql);
     <div class="row">
         <?php
 		foreach($lastestItems as $item) {
-			echo '<div class="col-md-3 col-6 product-item">
+			echo '<div class="col-md-3 col-6 product-item" style="box-shadow: inset 0 0 3em rgba(0,0,0,0.1), 0 0 0 2px rgb(255,255,255), 0.3em 0.3em 1em rgba(0,0,0,0.3);">
 					<a href="detail.php?id='.$item['id'].'"><img src="'.$item['thumbnail'].'" style="width: 100%; height: 200px;"></a>
 					<p style="font-weight: bold;"> Loại: '.$item['category_name'].'</p>
 					<p style="font-weight: bold;">'.$item['title'].'</p>
@@ -70,7 +70,7 @@ foreach($menuItems as $item) {
     <div class="row">
         <?php
             foreach($items as $pItem) {
-                echo '<div class="col-md-3 col-6 product-item">
+                echo '<div class="col-md-3 col-6 product-item" style="box-shadow: inset 0 0 3em rgba(0,0,0,0.1), 0 0 0 2px rgb(255,255,255), 0.3em 0.3em 1em rgba(0,0,0,0.3);">
                 <a href="detail.php?id='.$item['id'].'"><img src="'.$pItem['thumbnail'].'" style="width: 100%; height: 220px;"></a>
                 <p style="font-weight: bold;">Loại: '.$pItem['category_name'].'</p>
                 <p style="font-weight: bold;">'.$pItem['title'].'</p>

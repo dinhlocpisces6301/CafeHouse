@@ -17,7 +17,7 @@
 <head>
 	<title>Đăng Nhập</title>
 	<meta charset="utf-8">
-	<!-- <link rel="icon" type="image/png" href="https://gokisoft.com/uploads/2021/03/s-568-ico-web.jpg" /> -->
+	<link rel="icon" type="image/png" href="layouts/icon.png" />
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">

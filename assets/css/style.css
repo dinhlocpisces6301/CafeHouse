@@ -306,14 +306,14 @@ div #header-logo a {
 
     #header {
         overflow: hidden;
-        background-color: rgba(45, 131, 182, 0.95);
+        background-color: rgb(124, 131, 253);
     }
 
     #nav {
         left: 0;
         right: 0;
         top: 6rem;
-        background-color: rgba(45, 131, 182, 1);
+        background-color: rgb(124, 131, 253);
     }
 
     #nav li {
@@ -325,7 +325,6 @@ div #header-logo a {
         left: 10rem;
         z-index: 1000;
         width: 25%;
-
     }
 
     #nav li .sub-nav li:hover {
@@ -350,9 +349,27 @@ div #header-logo a {
         margin: 0 0.5rem;
     }
 
-    #nav li:hover>.sub-nav {
+    #nav li:hover > .sub-nav {
         display: flex;
         justify-content: space-around;
+    }
+
+    #nav li .sub-nav li p {
+        display: block;
+        text-align: center;
+        color: #000;
+        height: 10.5rem;
+        width: 15.5rem;
+        margin: 0;
+    }
+    
+    #nav li .sales-code {
+        left: 30rem;
+        top: -50%;
+    }
+    
+    #nav li .sales-code li {
+        background: url('ticket.jpg') top / cover no-repeat !important;
     }
 }
 
@@ -365,13 +382,13 @@ div #header-logo a {
 
     #header {
         overflow: hidden;
-        background-color: rgba(45, 131, 182, 0.95);
+        background-color: rgb(124, 131, 253);
     }
 
     #nav {
         left: 0rem;
         top: 6rem;
-        background-color: rgba(45, 131, 182, 1);
+        background-color: rgb(124, 131, 253);
     }
 
     #menu-btn {

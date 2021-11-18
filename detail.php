@@ -12,6 +12,7 @@ $lastestItems = executeResult($sql);
 ?>
 
 <div class="container">
+	<br/>
 	<ul class="breadcrumb">
 		<li><a href="index.php">Trang Chủ</a></li>
 		<li> / <a href="category.php">Cửa Hàng</a></li>

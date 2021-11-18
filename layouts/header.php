@@ -65,36 +65,23 @@
                     <a href="">Khuyến mãi</a>
                     <ul class="sub-nav sales-code">
                         <?php
-	  	                    // foreach($menuItems as $item) {
-	  		                // echo '<li>
-				            //         <a href="category.php?id='.$item['id'].'">'.$item['name'].'</a>
-				            //     </li>';
-	  	                    // }
+                            $sql = "select * from Sales_code";
+                        	$salescode = executeResult($sql);
+	  	                    foreach($salescode as $item) {
+                                $date = new DateTime($item['created_at']);
+                                $expired = new DateTime($item['expired_at']);
+                                if($expired->format('d-m-Y') > date("d-m-Y"))
+                                    echo '
+                                        <li>
+                                            <p>
+                                                Mã giảm giá: '.$item['code'].' </br>
+                                                Từ '.$date->format('d-m').' đến '.$expired->format('d-m-Y').' </br>
+                                                '.$item['content'].'
+                                            </p>
+                                        </li>';
+	  	                    }
 	                    ?>
 
-                        <li>
-				            <p>
-                                Mã giảm giá: IDJAODOH </br>
-                                Từ 01-31/11</br>
-                                Cho các đơn hàng từ 100k
-                            </p>
-				        </li>
-
-                        <li>
-				            <p>
-                                Mã giảm giá: IKOQINOJA </br>
-                                Từ 01-31/11</br>
-                                Cho các đơn hàng từ 100k
-                            </p>
-				        </li>
-
-                        <li>
-				            <p>
-                                Mã giảm giá: ADISDHAD </br>
-                                Từ 01-31/11</br>
-                                Cho các đơn hàng từ 100k
-                            </p>
-				        </li>
                     </ul>
                 </li>
 

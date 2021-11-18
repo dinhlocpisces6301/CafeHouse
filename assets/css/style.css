@@ -7,7 +7,7 @@
 html {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    padding-top: 5rem;
+    padding-top: 6rem;
     background-color: rgb(249, 249, 249);
 }
 
@@ -135,7 +135,7 @@ div #header-logo a {
     display: none;
     background-color: transparent;
     font-size: 1rem;
-    background-color: rgba(45, 131, 182, 1);
+    background-color: rgb(124, 131, 253);
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
 }

@@ -45,17 +45,18 @@ $lastestItems = executeResult($sql);
 		?>
 			<div style="display: flex;">
 				<button class="btn btn-light" style="border: solid #e0dede 1px; border-radius: 0px; width: 48px;" onclick="addMoreCart(-1)">-</button>
-				<input type="number" name="num" class="form-control" step="1" value="1" style="max-width: 100px; border: solid #e0dede 1px; border-radius: 0px; text-align: center;" onchange="fixCartNum()">
+				<input type="number" name="num" class="form-control" step="1" value="1" style="max-width: 144px; border: solid #e0dede 1px; border-radius: 0px; text-align: center;" onchange="fixCartNum()">
 				<button class="btn btn-light" style="border: solid #e0dede 1px; border-radius: 0px; width: 48px;" onclick="addMoreCart(1)">+</button>
 			</div>
-			<button class="btn btn-success" style="margin-top: 20px; width: 196px; border-radius: 0px; font-size: 16px;" onclick="addCart(<?=$product['id']?>, $('[name=num]').val())">
+			<button class="btn btn-success" style="margin-top: 20px; width: 240px; border-radius: 0px; font-size: 16px;" onclick="addCart(<?=$product['id']?>, $('[name=num]').val())">
 				<i class="bi bi-cart-plus-fill"></i> THÊM VÀO GIỎ HÀNG
 			</button>
+			<div class="col-md-12" style="margin-top: 20px;">
+				<h3 style="text-align: center;">Chi Tiết Sản Phẩm</h3>
+				<?=$product['description']?>
+			</div>
 		</div>
-		<div class="col-md-12" style="margin-top: 20px; margin-bottom: 30px;">
-			<h3 style="text-align: center;">Chi Tiết Sản Phẩm</h3>
-			<?=$product['description']?>
-		</div>
+		
 	</div>
 </div>
 <div class="container" style="margin-top: 20px; margin-bottom: 20px;">

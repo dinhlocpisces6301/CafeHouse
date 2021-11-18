@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 04, 2021 lúc 06:39 PM
+-- Thời gian đã tạo: Th10 18, 2021 lúc 02:21 PM
 -- Phiên bản máy phục vụ: 10.4.21-MariaDB
 -- Phiên bản PHP: 8.0.10
 
@@ -71,18 +71,6 @@ INSERT INTO `feedback` (`id`, `firstname`, `lastname`, `email`, `phone_number`, 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `galery`
---
-
-CREATE TABLE `galery` (
-  `id` int(11) NOT NULL,
-  `product_id` int(11) DEFAULT NULL,
-  `thumbnail` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
 -- Cấu trúc bảng cho bảng `orders`
 --
 
@@ -99,6 +87,13 @@ CREATE TABLE `orders` (
   `total_money` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `orders`
+--
+
+INSERT INTO `orders` (`id`, `user_id`, `fullname`, `email`, `phone_number`, `address`, `note`, `order_date`, `status`, `total_money`) VALUES
+(1, 1, 'Bui Dinh Loc', 'Dinhloc334@gmail.com', '0969819201', '16/3A, ấp Mỹ Hòa 1, xã Trung Chánh, huyện Hóc Môn, TpHCM', '', '2021-11-15 11:34:36', 0, 80000);
+
 -- --------------------------------------------------------
 
 --
@@ -113,6 +108,15 @@ CREATE TABLE `order_details` (
   `num` int(11) DEFAULT NULL,
   `total_money` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `order_details`
+--
+
+INSERT INTO `order_details` (`id`, `order_id`, `product_id`, `price`, `num`, `total_money`) VALUES
+(1, 1, 23, 30000, 1, 30000),
+(2, 1, 25, 25000, 1, 25000),
+(3, 1, 43, 25000, 1, 25000);
 
 -- --------------------------------------------------------
 
@@ -138,7 +142,7 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `category_id`, `title`, `price`, `discount`, `thumbnail`, `description`, `created_at`, `updated_at`, `deleted`) VALUES
-(1, 1, 'Cafe đen nguyên chất', 20000, 20000, 'assets/photos/cafe1.png', '', '2021-11-04 09:24:49', '2021-11-04 09:24:49', 0),
+(1, 1, 'Cafe đen nguyên chất', 20000, 20000, 'assets/photos/cafe1.png', '', '2021-11-04 09:24:49', '2021-11-18 12:02:50', 0),
 (2, 1, 'Cafe Sữa', 25000, 25000, 'assets/photos/cafe2.png', '', '2021-11-04 09:44:49', '2021-11-04 09:44:49', 0),
 (3, 1, 'Ca cao', 25000, 25000, 'assets/photos/cafe3.png', '', '2021-11-04 09:05:50', '2021-11-04 09:05:50', 0),
 (4, 1, 'Latte', 20000, 20000, 'assets/photos/cafe4.png', '', '2021-11-04 09:26:50', '2021-11-04 09:26:50', 0),
@@ -176,7 +180,7 @@ INSERT INTO `product` (`id`, `category_id`, `title`, `price`, `discount`, `thumb
 (36, 1, 'Trà sữa sô-cô-la', 25000, 25000, 'assets/photos/ChocolateMilkTea.png', '', '2021-11-04 10:32:08', '2021-11-04 10:32:08', 0),
 (37, 1, 'Nước ép Táo', 25000, 25000, 'assets/photos/drink1.png', '', '2021-11-04 10:00:09', '2021-11-04 10:00:09', 0),
 (38, 1, 'Sinh tố bơ', 25000, 25000, 'assets/photos/drink2.png', '', '2021-11-04 10:33:09', '2021-11-04 10:33:09', 0),
-(39, 1, 'Sữa chua', 25000, 25000, 'assets/photos/drink3.png', '', '2021-11-04 10:59:09', '2021-11-04 10:59:09', 0),
+(39, 1, 'Sữa chua', 25000, 20000, 'assets/photos/drink3.png', 'Ăn rất ngon nha', '2021-11-04 10:59:09', '2021-11-04 10:59:09', 0),
 (40, 1, 'Nước ép nho 1', 25000, 25000, 'assets/photos/drink4.png', '', '2021-11-04 10:22:10', '2021-11-04 10:22:10', 0),
 (41, 1, 'Nước ép bí', 25000, 25000, 'assets/photos/drink5.png', '', '2021-11-04 10:47:10', '2021-11-04 10:47:10', 0),
 (42, 1, 'Nước ép dâu tầm', 30000, 30000, 'assets/photos/drink6.png', '', '2021-11-04 10:13:11', '2021-11-04 10:13:11', 0),
@@ -213,6 +217,33 @@ INSERT INTO `role` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `sales_code`
+--
+
+CREATE TABLE `sales_code` (
+  `id` int(11) NOT NULL,
+  `code` varchar(11) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `expired_at` datetime DEFAULT NULL,
+  `content` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `sales_code`
+--
+
+INSERT INTO `sales_code` (`id`, `code`, `created_at`, `expired_at`, `content`) VALUES
+(1, 'FREESHIP', '2021-11-10 00:00:00', '2021-11-17 00:00:00', 'Cho các đơn hàng từ 100k'),
+(2, 'GIAMGIA', '2021-11-10 00:00:00', '2021-11-15 00:00:00', 'Cho các đơn hàng từ 100k'),
+(3, 'KHUYENMAI', '2021-11-10 00:00:00', '2021-11-17 00:00:00', 'Cho các đơn hàng từ 100k'),
+(4, 'ABCDEFG', '2021-11-18 00:00:00', '2021-11-30 00:00:00', 'Cho các đơn hàng từ 50k'),
+(5, 'FREESHIP', '2021-11-18 00:00:00', '2021-11-30 00:00:00', 'Cho các đơn hàng từ 100k'),
+(6, 'HOLAFRIEND', '2021-11-18 00:00:00', '2021-11-30 00:00:00', 'Cho các đơn hàng từ 200k'),
+(7, 'Test', '2021-11-18 14:41:18', '2021-11-18 00:00:00', '1');
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `tokens`
 --
 
@@ -227,7 +258,10 @@ CREATE TABLE `tokens` (
 --
 
 INSERT INTO `tokens` (`user_id`, `token`, `created_at`) VALUES
-(1, 'a404a37e50317b37789e539f32cf0907', '2021-11-04 09:42:19');
+(1, '6472f0898d260b5f050e8982f03f56fb', '2021-11-18 12:48:55'),
+(1, 'a404a37e50317b37789e539f32cf0907', '2021-11-04 09:42:19'),
+(1, 'fb2b23f40431123b353e3af06766600f', '2021-11-17 09:03:49'),
+(1, 'fb51bd117c050c57073c0a82de8841d8', '2021-11-05 18:28:45');
 
 -- --------------------------------------------------------
 
@@ -253,7 +287,10 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `fullname`, `email`, `phone_number`, `address`, `password`, `role_id`, `created_at`, `updated_at`, `deleted`) VALUES
-(1, 'Bui Dinh Loc', 'admin@holafriend.com', NULL, NULL, 'aa027964a5f2b2dee03bd45151730761', 1, '2021-11-04 09:40:26', '2021-11-04 09:40:26', 0);
+(1, 'Bui Dinh Loc', 'admin@holafriend.com', NULL, NULL, 'aa027964a5f2b2dee03bd45151730761', 1, '2021-11-04 09:40:26', '2021-11-04 09:40:26', 0),
+(2, 'Nguyễn Phùng Lê Luân', 'luannguyen123@gmail.com', '123456789', '123456789', 'aa027964a5f2b2dee03bd45151730761', 2, '2021-11-05 17:39:18', '2021-11-17 09:15:19', 0),
+(3, 'Phạm Văn Trọng', 'trongpham123@gmail.com', '123456789', '123456789', 'aa027964a5f2b2dee03bd45151730761', 2, '2021-11-14 05:13:31', '2021-11-17 09:15:08', 0),
+(4, 'UwU', '123@gmail.com', '123456789', '12/2A', 'aa027964a5f2b2dee03bd45151730761', 2, '2021-11-17 09:28:48', '2021-11-17 09:28:48', 0);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -270,13 +307,6 @@ ALTER TABLE `category`
 --
 ALTER TABLE `feedback`
   ADD PRIMARY KEY (`id`);
-
---
--- Chỉ mục cho bảng `galery`
---
-ALTER TABLE `galery`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `product_id` (`product_id`);
 
 --
 -- Chỉ mục cho bảng `orders`
@@ -307,6 +337,12 @@ ALTER TABLE `role`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Chỉ mục cho bảng `sales_code`
+--
+ALTER TABLE `sales_code`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Chỉ mục cho bảng `tokens`
 --
 ALTER TABLE `tokens`
@@ -327,18 +363,12 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT cho bảng `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT cho bảng `galery`
---
-ALTER TABLE `galery`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
@@ -357,29 +387,29 @@ ALTER TABLE `order_details`
 -- AUTO_INCREMENT cho bảng `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `role`
 --
 ALTER TABLE `role`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT cho bảng `sales_code`
+--
+ALTER TABLE `sales_code`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
 --
-
---
--- Các ràng buộc cho bảng `galery`
---
-ALTER TABLE `galery`
-  ADD CONSTRAINT `galery_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`);
 
 --
 -- Các ràng buộc cho bảng `orders`

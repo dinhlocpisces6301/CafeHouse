@@ -33,6 +33,7 @@
 <?php
 	$index = 0;
 	foreach($data as $item) {
+		$order_date = new DateTime($item['order_date']);
 		echo '<tr>
 					<th style="text-align: center">'.(++$index).'</th>
 					<td><a href="detail.php?id='.$item['id'].'">'.$item['fullname'].'</a></td>
@@ -41,7 +42,7 @@
 					<td>'.$item['address'].'</td>
 					<td>'.$item['note'].'</td>
 					<td>'.$item['total_money'].'</td>
-					<td>'.$item['order_date'].'</td>
+					<td>'.$order_date->format('d-m-Y H:i:s').'</td>
 					<td style="width: 50px">';
 		if($item['status'] == 0) {
 			echo '

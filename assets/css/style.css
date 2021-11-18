@@ -177,8 +177,7 @@ div #header-logo a {
 }
 
 #nav li .sales-code li {
-    background: url('ticket.jpg') top / cover no-repeat !important;
-    /* background-color: #fff; */
+    background: url('ticket.jpg') top center / cover no-repeat;
 }
 
 .container .breadcrumb {

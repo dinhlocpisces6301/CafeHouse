@@ -64,13 +64,17 @@
                 <li>
                     <a href="">Khuyến mãi</a>
                     <ul class="sub-nav sales-code">
+                        <p style="text-align: center; color: red; font-size: 18px;"> 
+                            Lưu ý! <br />
+                            Chỉ áp dụng khi thanh toán online
+                        </p>
                         <?php
                             $sql = "select * from Sales_code";
                         	$salescode = executeResult($sql);
 	  	                    foreach($salescode as $item) {
                                 $date = new DateTime($item['created_at']);
                                 $expired = new DateTime($item['expired_at']);
-                                if($expired->format('d-m-Y') > date("d-m-Y"))
+                                if($expired->format('d-m-Y') >= date("d-m-Y"))
                                     echo '
                                         <li>
                                             <p>

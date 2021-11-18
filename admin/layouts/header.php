@@ -54,13 +54,15 @@
       <nav class="col-md-2 d-none d-md-block bg-light sidebar">
         <div class="sidebar-sticky">
           <ul class="nav flex-column">
+
             <li class="nav-item">
               <a class="nav-link" href="<?=$baseUrl?>">
                 <i class="bi bi-house-fill"></i>
                 -- Dashboard
               </a>
             </li>
-            <?php
+
+          <?php
             if($user['role_id']==1){
               echo '<li class="nav-item ">
               <a class="nav-link" href="'.$baseUrl.'category">
@@ -68,8 +70,7 @@
                 -- Danh Mục Sản Phẩm
               </a>
               </li>';}
-            ?>
-            <?php
+            
             if($user['role_id']==1){
               echo '<li class="nav-item">
               <a class="nav-link" href="'.$baseUrl.'product">
@@ -77,20 +78,23 @@
                 -- Quản Lý Sản Phẩm
               </a>
               </li>';}
-            ?>
+          ?>
+
             <li class="nav-item">
               <a class="nav-link" href="<?=$baseUrl?>order">
                 <i class="bi bi-minecart"></i>
                 -- Quản Lý Đơn Hàng
               </a>
             </li>
+
             <li class="nav-item">
               <a class="nav-link" href="<?=$baseUrl?>feedback">
                 <i class="bi bi-question-circle-fill"></i>
                 -- Quản Lý Phản Hồi
               </a>
             </li>
-            <?php
+
+          <?php
             if($user['role_id']==1){
               echo '<li class="nav-item">
                 <a class="nav-link" href="'.$baseUrl.'user">
@@ -98,7 +102,15 @@
                   -- Quản Lý Người Dùng
                 </a>
                 </li>';}
-            ?>
+            
+            if($user['role_id']==1){
+              echo '<li class="nav-item">
+                <a class="nav-link" href="'.$baseUrl.'coupon">
+                  <i class="bi bi-square-fill"></i>
+                  -- Quản Lý Mã Ưu Đãi
+                </a>
+                </li>';}
+          ?>
           </ul>
         </div>
       </nav>

@@ -33,6 +33,7 @@
 <?php
 	$index = 0;
 	foreach($data as $item) {
+		$date = new DateTime($item['updated_at']);
 		echo '<tr>
 					<th style="text-align: center">'.(++$index).'</th>
 					<td>'.$item['firstname'].'</td>
@@ -41,7 +42,7 @@
 					<td>'.$item['email'].'</td>
 					<td>'.$item['subject_name'].'</td>
 					<td>'.$item['note'].'</td>
-					<td>'.$item['updated_at'].'</td>
+					<td>'.$date->format('d-m-Y H:i:s').'</td>
 					<td style="width: 50px">';
 		if($item['status'] == 0) {
 			echo '<button onclick="markRead('.$item['id'].')" class="btn btn-danger">Đã Đọc</button>';

@@ -20,7 +20,7 @@ if($total_records == 0)
 	echo'
 	<div class="container">
 	<br/>
-		<ul class="bsreadcrumb">
+		<ul class="breadcrumb">
 			<li>
 				<a href="index.php">Trang Chủ</a>
 			</li>

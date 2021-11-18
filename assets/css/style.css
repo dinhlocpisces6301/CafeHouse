@@ -7,7 +7,7 @@
 html {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    padding-top: 6rem;
+    padding-top: 5rem;
     background-color: rgb(249, 249, 249);
 }
 
@@ -212,6 +212,7 @@ div #header-logo a {
     background-color: rgb(124, 131, 253);
     left: 0;
     bottom: 0;
+    
     width: 100%;
 }
 
@@ -424,15 +425,18 @@ div #header-logo a {
 
 .recentNews {
     background-color:rgb(249, 249, 249);
+    background-image:url(BackGround.jpg);
 }
 .recentNews .news-title {
     text-align:center;
     padding-top:30px;
     padding-bottom:30px;
     font-family: 'nimbus-sans-condensed', sans-serif;
+    text-shadow: 2px 2px 4px #000000;
     font-size:55px;
     font-weight:bold;
     color:#000;
+    animation: myanimation 5s infinite;
 }
 .recentNews .row {
     display: flex;
@@ -507,5 +511,12 @@ div #header-logo a {
     transition: all 0.2s ease-in-out 0s;
 }
 .btn-news.btn-contests a:hover {
-    color: #000;
+    color: rgb(255, 38, 38);
 }
+  @keyframes myanimation {
+    0% {color: red;}
+    25%{color:red;}
+    50%{color:orange;}
+    75%{color:springgreen;}
+    100% {color: red;}
+  }

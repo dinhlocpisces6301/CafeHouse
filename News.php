@@ -3,7 +3,7 @@ require_once('layouts/header.php');
 ?>
 <section class="recentNews">
     <div class="container">
-        <h2 class="news-title">
+        <h2 class="news-title" >
             Tin tức HOT!!!!
         </h2>
         <div class="row">

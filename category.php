@@ -20,7 +20,7 @@ if($total_records == 0)
 	echo'
 	<div class="container">
 	<br/>
-		<ul class="breadcrumb">
+		<ul class="bsreadcrumb">
 			<li>
 				<a href="index.php">Trang Chủ</a>
 			</li>
@@ -44,10 +44,11 @@ if($total_records == 0)
 	require_once('layouts/footer.php');
 	return;
 }
-
+//TÌM LIMIT VÀ CURRENT_PAGE
 $current_page = isset($_GET['page']) ? $_GET['page'] : 1;
 $limit = 12;
-
+// TÍNH TOÁN TOTAL_PAGE VÀ START
+// tổng số trang
 $total_page = ceil($total_records / $limit);
 
 // Giới hạn current_page trong khoảng 1 đến total_page
@@ -60,7 +61,7 @@ else if ($current_page < 1){
 
 // Tìm Start
 $start = ($current_page - 1) * $limit;
-
+//TRUY VẤN LẤY DANH SÁCH TIN TỨC	
 if($category_id == null || $category_id == '') {
 	$sql = "select Product.*, Category.name as category_name from Product left join Category on Product.category_id = Category.id where Product.deleted = 0 order by Product.updated_at desc limit $start, $limit";
 } else {
@@ -114,12 +115,14 @@ $lastestItems = executeResult($sql);
 <div id="pagination">
     <?php 
 		echo '<ul class="pagination">';
+		// nếu current_page > 1 và total_page > 1 mới hiển thị nút Trước
             if ($current_page > 1 && $total_page > 1){
                 echo '<li>
 					<a href="category.php?id='.$category_id.'&&page='.($current_page-1).'"> Trước </a>
 				</li>';
             }
- 
+			// Nếu là trang hiện tại thì hiển thị thẻ span
+    		// ngược lại hiển thị thẻ a
             for ($i = 1; $i <= $total_page; $i++){
                 if ($i == $current_page){
                     echo '<li>
@@ -132,7 +135,7 @@ $lastestItems = executeResult($sql);
 					</li>';
                 }
             }
- 
+			// nếu current_page < $total_page và total_page > 1 mới hiển thị nút Sau
             if ($current_page < $total_page && $total_page > 1){
                 echo '<li>
 					<a href="category.php?id='.$category_id.'&&page='.($current_page+1).'"> Sau </a>

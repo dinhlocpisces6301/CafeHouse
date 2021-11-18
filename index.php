@@ -1,7 +1,7 @@
 <?php 
 require_once('layouts/header.php');
 
-$sql = "select Product.*, Category.name as category_name from Product left join Category on Product.category_id = Category.id order by Product.updated_at desc limit 0,8";
+$sql = "select Product.*, Category.name as category_name from Product left join Category on Product.category_id = Category.id where Product.deleted = 0 order by Product.updated_at desc limit 0,8";
 $lastestItems = executeResult($sql);
 ?>
 <!-- banner -->
@@ -60,7 +60,7 @@ $lastestItems = executeResult($sql);
 <?php
 $count = 0;
 foreach($menuItems as $item) {
-	$sql = "select Product.*, Category.name as category_name from Product left join Category on Product.category_id = Category.id where Product.category_id = ".$item['id']." order by Product.updated_at desc limit 0,4";
+	$sql = "select Product.*, Category.name as category_name from Product left join Category on Product.category_id = Category.id where Product.category_id = ".$item['id']." and Product.deleted = 0 order by Product.updated_at desc limit 0,4";
 	$items = executeResult($sql);
 	if($items == null || count($items) < 4) continue;
 ?>

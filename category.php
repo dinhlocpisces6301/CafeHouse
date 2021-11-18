@@ -4,13 +4,13 @@ require_once('layouts/header.php');
 $category_id = getGet('id');
 
 if($category_id == null || $category_id == '') {
-	$sql = "select * from product";
+	$sql = "select * from product where product.deleted = 0";
 }
 else {
 	$sql = "select * from category where id = $category_id";
 	$category = executeResult($sql, true);
 
-	$sql = "select * from product where category_id = $category_id";
+	$sql = "select * from product where category_id = $category_id and Product.deleted = 0";
 }
 $total_record = executeResult($sql);
 $total_records = count($total_record);
@@ -62,9 +62,9 @@ else if ($current_page < 1){
 $start = ($current_page - 1) * $limit;
 
 if($category_id == null || $category_id == '') {
-	$sql = "select Product.*, Category.name as category_name from Product left join Category on Product.category_id = Category.id order by Product.updated_at desc limit $start, $limit";
+	$sql = "select Product.*, Category.name as category_name from Product left join Category on Product.category_id = Category.id where Product.deleted = 0 order by Product.updated_at desc limit $start, $limit";
 } else {
-	$sql = "select Product.*, Category.name as category_name from Product left join Category on Product.category_id = Category.id where Product.category_id = $category_id order by Product.updated_at desc limit $start, $limit";
+	$sql = "select Product.*, Category.name as category_name from Product left join Category on Product.category_id = Category.id where Product.category_id = $category_id and Product.deleted = 0 order by Product.updated_at desc limit $start, $limit";
 }
 
 $lastestItems = executeResult($sql);

@@ -8,11 +8,11 @@ html {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     padding-top: 6rem;
-    background-color: #dce6ec;
+    background-color: rgb(249, 249, 249);
 }
 
 #main {    
-    background-color: #dce6ec;
+    background-color: rgb(249, 249, 249);
 }
 
 #header {
@@ -21,7 +21,7 @@ html {
     left: 0;
     right: 0;
     height: 6rem;
-    background-color: rgba(45, 131, 182, 0.8);
+    background-color: rgb(124, 131, 253);
     padding-bottom: 4px;
     z-index: 999;
 }
@@ -56,6 +56,7 @@ div #header-logo {
 div #header-logo a {
     text-decoration: none;
     color: rgb(255, 196, 0);
+    text-shadow: 2px 2px 4px #000000;
 }
 
 
@@ -208,7 +209,7 @@ div #header-logo a {
 
 #footer {
     position: relative;
-    background-color: #2d83b6;
+    background-color: rgb(124, 131, 253);
     left: 0;
     bottom: 0;
     width: 100%;
@@ -405,7 +406,7 @@ div #header-logo a {
 }
 
 .recentNews {
-    background-color:#fff;
+    background-color:rgb(249, 249, 249);
 }
 .recentNews .news-title {
     text-align:center;
@@ -426,7 +427,7 @@ div #header-logo a {
     margin-bottom: 30px;
 }
 .ct-blog .inner {
-    background-color:#ffff00;
+    background-color:rgb(255, 249, 182);
     padding: 10px;
     transition: all 0.2s ease-in-out 0s;
     cursor: pointer;
@@ -434,7 +435,7 @@ div #header-logo a {
     box-shadow: inset 0 0 3em rgba(0,0,0,0.1), 0 0 0 2px rgb(255,255,255), 0.3em 0.3em 1em rgba(0,0,0,0.3);
 }
 .ct-blog .inner:hover {
-    background-color: aqua;
+    background-color: rgb(255, 204, 210);
 }
 .ct-blog .fauxcrop {
     height: 180px;

@@ -19,10 +19,10 @@ $lastestItems = executeResult($sql);
             <img src="assets/photos/banner1.png" alt="">
         </div>
         <div class="carousel-item">
-            <img src="assets/photos/banner1.png" alt="">
+            <img src="assets/photos/banner2.jpg" alt="">
         </div>
         <div class="carousel-item">
-            <img src="assets/photos/banner1.png" alt="">
+            <img src="assets/photos/banner3.jpg" alt="">
         </div>
     </div>
 

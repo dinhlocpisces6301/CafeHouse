@@ -194,6 +194,7 @@ div #header-logo a {
 
 .container .breadcrumb li a {
     color: red;
+    font-weight: bold;
 }
 
 #main .container {

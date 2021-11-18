@@ -15,6 +15,36 @@ else {
 $total_record = executeResult($sql);
 $total_records = count($total_record);
 
+if($total_records == 0)
+{
+	echo'
+	<div class="container">
+	<br/>
+		<ul class="breadcrumb">
+			<li>
+				<a href="index.php">Trang Chủ</a>
+			</li>
+
+			<li>/ 
+	';
+	if($category_id != null || $category_id != '')
+		echo '<a href="category.php">Cửa Hàng</a>';
+	else
+		echo 'Cửa Hàng';
+
+	echo'
+			</li>
+
+			<li>/
+				Doanh mục hiện không có sản phẩm!
+			</li>
+		</ul>
+	</div>';
+
+	require_once('layouts/footer.php');
+	return;
+}
+
 $current_page = isset($_GET['page']) ? $_GET['page'] : 1;
 $limit = 12;
 

@@ -13,6 +13,7 @@ html {
 
 #main {    
     background-color: rgb(249, 249, 249);
+    background-image:url(MainBackGround.jpg);
 }
 
 #header {
@@ -505,7 +506,7 @@ div #header-logo a {
     text-align: center;
 }
 .btn-news.btn-contests a {
-    color:#000;
+    color:rgb(61, 178, 255);
     font-family: 'nimbus-sans-condensed', sans-serif;
     font-size: 24px;
     transition: all 0.2s ease-in-out 0s;
